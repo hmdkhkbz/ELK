@@ -25,6 +25,11 @@ sudo systemctl start elasticsearch
 sudo systemctl enable elasticsearch
 #curl -X GET "localhost:9200"
 
+# Logstash
+
+sudo apt install -y logstash
+
+
 # Install Kibana
 
 apt install kibana -y
