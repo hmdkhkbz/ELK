@@ -29,6 +29,10 @@ sudo systemctl enable elasticsearch
 
 sudo apt install -y logstash
 
+systemctl start logstash
+
+systemctl enable logstash
+
 
 # Install Kibana
 
