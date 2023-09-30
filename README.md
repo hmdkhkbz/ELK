@@ -108,6 +108,11 @@ iptables -A INPUT -p tcp --dport 80 -j DROP
 
 iptables -I INPUT 1 -s 127.0.0.1 -j ACCEPT
 
+#access to Filebeat of wordpress
+
+sudo iptables -A INPUT -p tcp -s 94.101.184.224 --dport 5044 -j ACCEPT
+
+
 sudo apt-get install -y iptables-persistent
 
 sudo netfilter-persistent save
