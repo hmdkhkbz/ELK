@@ -108,6 +108,6 @@ iptables -A INPUT -p tcp --dport 80 -j DROP
 
 iptables -I INPUT 1 -s 127.0.0.1 -j ACCEPT
 
-sudo apt-get install iptables-persistent
+sudo apt-get install -y iptables-persistent
 
 sudo netfilter-persistent save
