@@ -95,11 +95,19 @@ sudo systemctl enable filebeat
 # iptables (Hardening)
 
 iptables -A INPUT -p tcp --dport 5601 -j DROP
+
 iptables -A INPUT -p tcp --dport 9600 -j DROP
+
 iptables -A INPUT -p tcp --dport 9200 -j DROP
+
 iptables -A INPUT -p tcp --dport 5044 -j DROP
+
 iptables -A INPUT -p tcp --dport 9300 -j DROP
+
 iptables -A INPUT -p tcp --dport 80 -j DROP
+
 iptables -I INPUT 1 -s 127.0.0.1 -j ACCEPT
+
 sudo apt-get install iptables-persistent
+
 sudo netfilter-persistent save
