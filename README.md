@@ -1,2 +1,2 @@
-.... ELK (Elasticsearch, Kibana, Logstash, Filebeat)
+.... ELK (Elasticsearch, Kibana, Logstash, Filebeat and nginx)
 
