@@ -41,6 +41,8 @@ touch  /etc/logstash/conf.d/02-beats-input.conf
 
 touch /etc/logstash/conf.d/30-elasticsearch-output.conf
 
+sudo -u logstash /usr/share/logstash/bin/logstash --path.settings /etc/logstash -t
+
 
 # Install Kibana
 
