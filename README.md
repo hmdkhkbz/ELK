@@ -33,11 +33,13 @@ systemctl start logstash
 
 systemctl enable logstash
 
-# edit "/etc/logstash/conf.d/02-beats-input.conf" and customize it based on your environment
+# Edit "/etc/logstash/conf.d/02-beats-input.conf" and customize it based on your environment.
 
 touch  /etc/logstash/conf.d/02-beats-input.conf
 
+# Also Edit "/etc/logstash/conf.d/30-elasticsearch-output.conf" and customize it based on your environment.
 
+touch /etc/logstash/conf.d/30-elasticsearch-output.conf
 
 
 # Install Kibana
