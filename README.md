@@ -10,6 +10,8 @@ echo "nameserver 10.202.10.102 " | sudo tee -a /etc/resolv.conf
 
 apt update
 
+# Install Elasticsearch
+
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch |sudo gpg --dearmor -o /usr/share/keyrings/elastic.gpg
 
 echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
@@ -23,17 +25,23 @@ sudo systemctl start elasticsearch
 sudo systemctl enable elasticsearch
 #curl -X GET "localhost:9200"
 
+# Install Kibana
+
 apt install kibana -y
 
 systemctl start kibana
 
 systemctl enable kibana
 
+# Install nginx
+
 apt install -y nginx
 
 systemctl start nginx
 
 systemctl enable nginx
+
+# Install apache2-utils 
 
 apt install apache2-utils -y
 
@@ -46,6 +54,8 @@ cp /etc/nginx/nginx.conf nginx.conf.back
 nginx -t
 
 systemctl reload nginx
+
+# Install Filebeat
 
 sudo apt install filebeat -y
 
