@@ -1,5 +1,5 @@
 .... ELK (Elasticsearch, Kibana, Logstash, Filebeat and nginx)
-# 403 !!!
+# 403 !!! it is recommanded for set SNI proxy on your server.
 
 rm /etc/resolv.conf
 
