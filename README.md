@@ -116,3 +116,17 @@ sudo iptables -A INPUT -p tcp -s 94.101.184.224 --dport 5044 -j ACCEPT
 sudo apt-get install -y iptables-persistent
 
 sudo netfilter-persistent save
+
+# Generate TLS/SSL Certificate using certbot as below:
+
+sudo apt update
+
+sudo apt install certbot python3-certbot-nginx -y
+
+sudo systemctl stop nginx
+
+sudo certbot --nginx -d elk.hmd.ir
+
+sudo systemctl start nginx
+
+
