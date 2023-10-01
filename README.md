@@ -23,6 +23,7 @@ sudo apt install elasticsearch -y
 sudo systemctl start elasticsearch
 
 sudo systemctl enable elasticsearch
+
 #curl -X GET "localhost:9200"
 
 # Logstash
