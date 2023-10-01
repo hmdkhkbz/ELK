@@ -108,6 +108,13 @@ iptables -A INPUT -p tcp --dport 80 -j DROP
 
 iptables -I INPUT 1 -s 127.0.0.1 -j ACCEPT
 
+iptables -I INPUT 1 -s 94.101.184.224 -j ACCEPT
+
+iptables -I INPUT 1 -s 188.121.112.210 -j ACCEPT
+
+iptables -I INPUT 1 -s 188.121.101.104 -j ACCEPT
+
+
 #access to Filebeat of wordpress
 
 sudo iptables -A INPUT -p tcp -s 94.101.184.224 --dport 5044 -j ACCEPT
