@@ -125,7 +125,7 @@ sudo apt install certbot python3-certbot-nginx -y
 
 sudo systemctl stop nginx
 
-sudo certbot --nginx -d elk.hmd.ir
+sudo certbot --nginx -d elk.hmdkh.ir
 
 sudo systemctl start nginx
 
